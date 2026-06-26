@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM 2</title>
 </head>
-<body>
-    
+<body style="background-color:black; color: white;">
+
 </body>
+<script>
+    let div = document.createElement('div');
+    console.log(div);
+    
+    div.className = "newEle";
+    div.id = Math.round(Math.random()*10 + 1);
+    div.setAttribute("title", "My work");
+    div.style.backgroundColor = "yellow"
+    // div.innerHTML = "Hi there";
+
+    let addText = document.createTextNode("Bye now")
+
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+</script>
 </html>
