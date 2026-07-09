@@ -14,4 +14,7 @@ const user = {
 // user.studiedIn();
 // console.log(this);
 
-
+const num = ()=>{
+    let name = 'Kiran';
+    console.log(this);    
+}
