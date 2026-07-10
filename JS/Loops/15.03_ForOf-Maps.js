@@ -15,3 +15,12 @@ for (const [key,value] of map) {
     // console.log(key);    
 }
 
+let obj = {
+    a:1,
+    b:2
+}
+
+for (const [key] of Object) {
+    console.log(key);    
+}
+

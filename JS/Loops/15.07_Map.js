@@ -5,4 +5,9 @@ let value = arr.map((e)=>{
 }).filter((ele)=>{
     return ele>10;
 })
-console.log(value);
+// console.log(value);
+
+let val = arr.map((e)=>{
+    return e>3;
+})
+console.log(val);
