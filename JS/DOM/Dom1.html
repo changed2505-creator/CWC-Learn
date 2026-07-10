@@ -28,13 +28,23 @@
 // console.log(parent.lastElementChild);
 
 const day1 = document.querySelector('.day')
-console.log(day1);
+// console.log(day1);
 
-console.log(day1.parentElement);
-console.log(day1.nextElementSibling);
+// console.log(day1.parentElement);
+// console.log(day1.nextElementSibling);
 
-console.log("NODES:", parent.childNodes);
+// console.log("NODES:", parent.childNodes);
 
+let divele = document.createElement('div');
+divele.className = 'Fri'
+divele.id = 'F'
+divele.setAttribute('title','Friday')
+divele.style.color = 'orange'
+let text = document.createTextNode("Friday");
+divele.appendChild(text)
+document.body.appendChild(divele)
+
+console.log(divele);
 
 
 </script>

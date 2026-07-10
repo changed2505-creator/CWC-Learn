@@ -19,10 +19,34 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, quod.</p>
     </div>
 
-    <ul>
+    <ul class="UL">
         <li class="Li-item">1</li>
         <li class="Li-item">2</li>
         <li class="Li-item">3</li>
     </ul>
+
+    <script>
+        let UL = document.querySelector(".UL");
+
+        function addNo(num) {
+            let newLi = document.createElement("li");
+            newLi.appendChild(document.createTextNode(num));
+            UL.appendChild(newLi)
+        }
+        addNo(4)
+
+        let thirdChild = document.querySelector('li:nth-child(3)');
+        // thirdChild.innerHTML = "2.5"
+
+        let newLi = document.createElement('li');
+        newLi.appendChild(document.createTextNode("2.5"))
+        // thirdChild.replaceWith(newLi);
+
+        // thirdChild.outerHTML = "<li>2.5</li>"
+
+
+        thirdChild.remove();
+    </script>
+    
 </body>
 </html>
