@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+</head>
+
+<body style="background-color: gray;">
+        <h1>All Images</h1>
+        <ul id="images">
+                <li><img width="200px" id="word"
+                                src="https://images.pexels.com/photos/19856577/pexels-photo-19856577.jpeg"
+                                alt="WordBox"></li>
+                <li><img width="200px" id="scenery"
+                                src="https://images.pexels.com/photos/36781759/pexels-photo-36781759.jpeg" alt=""></li>
+                <li><img width="200px" id="trek"
+                                src="https://images.pexels.com/photos/34599611/pexels-photo-34599611.jpeg" alt=""></li>
+                <li><img width="200px" id="moment"
+                                src="https://images.pexels.com/photos/6050/nature-bird-people-grass.jpg" alt=""></li>
+                <li><img width="200px" id="greenery"
+                                src="https://images.pexels.com/photos/29544685/pexels-photo-29544685.jpeg" alt=""></li>
+                <li><a style="color: black;" id="google" href="https://www.google.com">Google</a></li>
+        </ul>
+        <label for="pass"><input type="text" id="pass" placeholder="Password"></label>
+</body>
+<script>
+        // document.querySelector('#word').addEventListener('click',(e)=>{
+        //         console.log(e);                        
+        // },false)
+
+        // document.querySelector('#images').addEventListener('click', (e) => {
+
+        //         console.log(`Cliked ul`);
+        // })
+
+        // document.querySelector('#trek').addEventListener('click', (e) => {
+        //         console.log(`Clicked trek img.`);
+        // })
+
+        // document.querySelector('#google').addEventListener('click',(e)=>{
+        //         e.preventDefault()
+        //         e.stopPropagation()
+        //         console.log(`Default prevented`);                
+        // },false)
+
+
+        // document.querySelector('#images').addEventListener('click', (e) => {
+        //         // console.log(e.target.parentNode); 
+        //         if (e.target.tagName === 'IMG') {
+        //                 let rem = e.target.parentNode;
+        //                 rem.remove();
+        //         }
+
+        //         // rem.parentNode.removeChild(rem)
+        // })
+
+        document.querySelector('#pass').addEventListener('focus',(e)=>{
+                console.log(e);
+                
+                e.target.style.backgroundColor = 'red'
+        })
+
+         document.querySelector('#pass').addEventListener('blur',(e)=>{
+                console.log(e);
+                
+                e.target.style.backgroundColor = 'yellow'
+        })
+
+</script>
+
+</html>
