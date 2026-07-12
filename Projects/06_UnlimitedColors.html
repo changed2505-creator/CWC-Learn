@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #fff">
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://www.youtube.com/@chaiaurcode">Youtube channel</a>
+    </nav>
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+
+        let setInt;
+
+        function changeColor() {
+            let R = Math.floor(Math.random() * 255 + 1);
+            let G = Math.floor(Math.random() * 255 + 1);
+            let B = Math.floor(Math.random() * 255 + 1);
+            document.body.style.backgroundColor = `rgb(${R},${G},${B})`;
+        }
+
+        function hexColor() {
+            let hex = `0123456789ABCDEF`;
+            let color = `#`;
+            for (let i = 0; i< 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            document.body.style.backgroundColor = color;            
+        }      
+
+        document.querySelector('#start').addEventListener('click', () => {
+            setInt = setInterval(hexColor, 1000);
+        });
+
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearInterval(setInt);
+            setInt = null;
+        });
+
+    </script>
+</body>
+
+</html>
