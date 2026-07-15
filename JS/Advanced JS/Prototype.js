@@ -1,26 +1,62 @@
-function Proto(num) {
-    return num*5;
+let arr = [1, "Hi", 4]
+
+let obj = {
+    a: 1,
+    b: "array",
+    c: function () {
+        // console.log(`Value of b is : ${this.b}`);
+    }
 }
 
-Proto.power = 10;
-
-// console.log(Proto(6));
-// console.log(Proto.power);
-// console.log(Proto.prototype);
-
-function user(name,age) {
-    this.name = name;
-    this.age = age;
+Object.prototype.me = function () {
+    // console.log(`You can't see me!!!`);
 }
 
-user.prototype.addAge = function(){
-    this.age++
-}
-user.prototype.printName = function(){
-    console.log(`Name : ${this.name}`);    
+Array.prototype.you = function () {
+    // console.log(`I can see you!!!`);
 }
 
-let aging = new user("Joker",25)
-let aging1 = user("Batman",30)
+// obj.me()
+// arr.me()
+// arr.you()
+// obj.you()
 
-aging.printName()
+// ____________________________________________old
+
+let user = {
+    name : "Hitesh",
+    age : 35
+}
+let details = {
+    email : "hitesh@gmail.com",
+    address : "....."
+}
+let family = {
+    wife : "Urumila",
+    son : "Rajesh",
+    __proto__ : details
+}
+
+// console.log(family.email);
+// details.__proto__ = user
+// console.log(details.name);
+
+// ______________________________________________new
+
+Object.setPrototypeOf(details,user)
+// console.log(details.name);
+
+
+// _________________________________________________Problem
+
+
+let name = "Aarthi    "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    console.log(`${this.trim().length}`);
+    
+}
+
+name.trueLength()
+"Shubham".trueLength()
