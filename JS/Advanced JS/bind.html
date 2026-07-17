@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+
+<body>
+    <button>Click</button>
+</body>
+<script>
+    class Click {
+        constructor() {
+            this.username = "username"
+            this.server = "https://Localhost:3000";
+
+            document.querySelector('button').addEventListener('click', this.clicked.bind(this))
+        }
+
+
+        clicked() {
+            console.log('Clicked');
+            console.log(`Server set to ${this.server}`);
+        }
+
+    }
+
+    const user = new Click()
+</script>
+
+</html>
