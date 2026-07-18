@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LS & C</title>
+</head>
+
+<body style="background-color: gray;">
+  <button id="Green">Green</button>
+  <button id="Orange">Orange</button>
+</body>
+<script>
+  // function init() {
+  //   let name = "Mozilla"; // name is a local variable created by init
+  //   function displayName() {
+  //     // displayName() is the inner function, that forms a closure
+  //     console.log(name); // use variable declared in the parent function
+  //   }
+  //   displayName();
+  // }
+  // init();
+
+  // function outer() {
+  //   let me = "I"
+  //   function inner() {
+  //     let you = "U"
+  //     console.log(me);      
+  //   }
+  //   // console.log(you);    
+  //   inner()
+  // }
+  // outer()
+ 
+// ------------------------------------------Closure
+
+  // function makeFunc() {
+  //   const name = "Mozilla";
+  //   function displayName() {
+  //     console.log(name);
+  //   }
+  //   return displayName;
+  // }
+
+  // const myFunc = makeFunc();
+  // myFunc();  
+
+</script>
+  
+<script>
+  // document.querySelector('#Green').addEventListener('click',()=>{
+  //   document.body.style.backgroundColor = "green"
+  // })
+
+  // document.querySelector('#Orange').addEventListener('click',()=>{
+  //   document.body.style.backgroundColor = "orange"
+  // })
+
+  function changeColor(color) {
+
+    return function () {
+      document.body.style.backgroundColor = `${color}`
+    }
+    
+  }
+
+  document.querySelector('#Orange').onclick = changeColor("orange")
+  document.querySelector('#Green').onclick = changeColor("green")
+</script>
+
+</html>
